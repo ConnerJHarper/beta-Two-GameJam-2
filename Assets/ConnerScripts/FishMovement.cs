@@ -22,5 +22,7 @@ public class FishMovement : MonoBehaviour
         {
             direction *= -1;
         }
+
+        
     }
 }
