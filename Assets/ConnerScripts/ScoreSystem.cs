@@ -7,8 +7,7 @@ public class ScoreSystem : MonoBehaviour
 {
     public int score;
     public Text scoreText;
-    public Text TimeLimit;
-
+    public int combo;
     public Animation comboAnim;
 
     public void Start()
@@ -37,12 +36,9 @@ public class ScoreSystem : MonoBehaviour
         }
 
     }
-
-
-
     public void ComboBoost()
     {
-        score += 30;  
+        score += combo;  
         comboAnim.Play();
     }
 }
