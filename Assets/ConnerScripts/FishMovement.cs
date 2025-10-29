@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class FishMovement : MonoBehaviour
@@ -35,11 +36,6 @@ public class FishMovement : MonoBehaviour
 
         }
 
-        if (combo == 10)
-        {
-             
-        }
-       
     }
 
     void Flip()
