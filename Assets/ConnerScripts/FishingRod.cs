@@ -3,23 +3,14 @@ using UnityEngine;
 public class FishingRod : MonoBehaviour
 {
     public GameObject hookPrefab;
-    public Transform hookSpawn;
-    private GameObject currentHook;
+    public Transform hookSpawnPoint;
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (currentHook == null)
-            {
-                // Drop Hook
-                currentHook = Instantiate(hookPrefab, hookSpawn.position, Quaternion.identity);
-            }
-            else
-            {
-                // Reel In (destroy hook)
-                Destroy(hookPrefab);
-            }
+            // Drop a new hook every time space is pressed
+            Instantiate(hookPrefab, hookSpawnPoint.position, Quaternion.identity);
         }
     }
 }
