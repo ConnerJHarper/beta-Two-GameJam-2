@@ -16,11 +16,13 @@ public class Hook : MonoBehaviour
 
 
         }
-    }
 
-        public void EndState()
+        void EndState()
         {
-            
+            if (score = )
+            {
+                
+            }
         }
-    
+    }
 }
