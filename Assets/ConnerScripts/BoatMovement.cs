@@ -9,5 +9,7 @@ public class BoatMovement : MonoBehaviour
     {
         float move = Input.GetAxis("Horizontal");
         transform.Translate(Vector2.right * move * moveSpeed * Time.deltaTime);
+
+        
     }
 }

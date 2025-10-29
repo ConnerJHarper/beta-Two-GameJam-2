@@ -39,6 +39,9 @@ public class Hook : MonoBehaviour
             Debug.Log("Fish caught!");
             Destroy(collision.gameObject);
 
+            Destroy(gameObject);
+            
+
             // ?? Add to score
             if (GameManager.Instance != null)
                 GameManager.Instance.AddScore(1);
