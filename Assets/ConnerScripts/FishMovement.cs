@@ -16,6 +16,7 @@ public class FishMovement : MonoBehaviour
     void Start()
     {
         startPos = transform.position;
+        
     }
 
     void Update()
@@ -32,7 +33,8 @@ public class FishMovement : MonoBehaviour
 
         if (isCombo)
         {
-            speed += 1f;
+            speed += 1f; 
+
 
         }
 

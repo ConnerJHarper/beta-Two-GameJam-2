@@ -5,7 +5,7 @@ public class Hook : MonoBehaviour
 {
     public float reelDelay = 3f;       // when to start reeling up
     public float reelSpeed = 3f;       // speed of reeling
-    public float lifetime = 4f;        // total time before despawning
+    public float lifetime = 5f;        // total time before despawning
     private bool isReelingUp = false;
     private Vector3 startPos;
     private LineRenderer lineRenderer;
