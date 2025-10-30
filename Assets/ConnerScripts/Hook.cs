@@ -65,6 +65,8 @@ public class Hook : MonoBehaviour
             if (GameManager.Instance != null)
                 GameManager.Instance.AddScore(1);
         }
+
+        Destroy(gameObject);
     }
 
     private void Despawn()
