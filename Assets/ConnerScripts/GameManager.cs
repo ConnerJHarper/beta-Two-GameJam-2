@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Rendering;
 
@@ -27,8 +27,12 @@ public class GameManager : MonoBehaviour
 
     public void AddScore(int amount)
     {
+        amount = 10;
+
         score += amount;
         Debug.Log("Score" + score);
+
+        UpdateScoreUI();
     }
 
     private void UpdateScoreUI()
