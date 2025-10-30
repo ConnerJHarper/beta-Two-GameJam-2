@@ -9,22 +9,15 @@ public class GameManager : MonoBehaviour
     public int score = 0;
     public Text scoreText;
 
-    public Text comboText;
     public bool combo;
 
-
-    public Image rankImageA;
-    public Image rankImageB;
-    public Image rankImageC;
-    public Image rankImageD;
-    public Image rankImageE;
-
-    bool isASet;
-    bool isBSet;
+    public GameObject[] rankImages;
+    public Text comboText; 
 
     void Start()
     {
         UpdateScoreUI();
+
     }
 
     void Awake()
@@ -44,7 +37,8 @@ public class GameManager : MonoBehaviour
     public void Update()
     {
         ChangeComboUI();
-        
+
+        ChangeRanks();
     }
 
     public void AddScore(int amount)
@@ -52,7 +46,7 @@ public class GameManager : MonoBehaviour
         amount = 10;
 
         score += amount;
-        Debug.Log("Score" + score);
+        Debug.Log("Score" + score); 
 
         UpdateScoreUI();
 
@@ -69,20 +63,15 @@ public class GameManager : MonoBehaviour
     private void UpdateScoreUI()
     {
         if (scoreText != null)
-        scoreText.text = "Score: " + score;
+        scoreText.text = "Score: " + score; 
     }
 
     public void ChangeRanks()
     {
-        if (score == 30)
-        {
-            isASet = true;
-        }
+        if (score >= 30)
+            rankImages[1] = new GameObject();
 
-        if (isASet = true && score == 90)
-        {
-            isBSet = true;
-            isASet = false;
-        }
+
+
     }
 }
