@@ -24,20 +24,22 @@ public class FishMovement : MonoBehaviour
 
     void Update()
     {
+        MoveFish();
+        UpdateComboText();
+    }
+
+    private void MoveFish()
+    {
         // Move horizontally
         transform.Translate(Vector2.right * speed * direction * Time.deltaTime);
 
-        // Flip when out of range
+        // Flip when exceeding range
         if (Vector2.Distance(startPos, transform.position) > range)
         {
+            // Clamp to range edge to prevent jitter
+            transform.position = startPos + Vector3.right * range * direction;
             direction *= -1;
             Flip();
-        }
-
-        // Optional: show combo text
-        if (isCombo && comboText != null)
-        {
-            comboText.text = "Combo: " + combo;
         }
     }
 
@@ -46,6 +48,14 @@ public class FishMovement : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
+    }
+
+    private void UpdateComboText()
+    {
+        if (isCombo && comboText != null)
+        {
+            comboText.text = "Combo: " + combo;
+        }
     }
 
     // Called by GameManager when combo rank increases
