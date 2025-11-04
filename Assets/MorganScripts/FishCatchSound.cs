@@ -3,15 +3,14 @@
 public class FishCatchSound : MonoBehaviour
 {
     [Header("Catch Sound Settings")]
-    public AudioClip catchClip;            // assign your coin / catch sound here
-    [Range(0f, 1f)] public float volume = 1f;
-    public float pitchIncrease = 0.2f;     // how much pitch rises per catch
-    public float maxPitch = 2f;            // highest pitch allowed
+    public AudioClip catchClip;
+    [Range(0f, 1f)] public float volume = 1f; // Volume Slider
+    public float pitchIncrease = 0.25f; // Pitch / Combo Increase Increments
+    public float maxPitch = 2f; // Max Pitch / Combo Sound
     private static float comboPitch = 1f;
     public static void ResetCombo()
     {
         comboPitch = 1f;
-        Debug.Log("FishCatchSound combo reset.");
     }
 
     private void OnTriggerEnter2D(Collider2D other)
