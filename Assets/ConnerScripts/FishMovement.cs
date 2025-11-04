@@ -11,6 +11,10 @@ public class FishMovement : MonoBehaviour
     private int direction = 1;
     private float baseSpeed;
 
+    [Header("Score Settings")]
+    [Tooltip("How many points this fish gives when caught")]
+    public int scoreValue = 10;
+
     [Header("Combo UI (optional)")]
     public bool isCombo = false;
     public int combo = 0;
@@ -19,7 +23,8 @@ public class FishMovement : MonoBehaviour
     void Start()
     {
         startPos = transform.position;
-        baseSpeed = speed; // Store original speed
+        baseSpeed = speed;
+        direction = Random.value > 0.5f ? 1 : -1; // Random start direction
     }
 
     void Update()
@@ -30,13 +35,10 @@ public class FishMovement : MonoBehaviour
 
     private void MoveFish()
     {
-        // Move horizontally
         transform.Translate(Vector2.right * speed * direction * Time.deltaTime);
 
-        // Flip when exceeding range
         if (Vector2.Distance(startPos, transform.position) > range)
         {
-            // Clamp to range edge to prevent jitter
             transform.position = startPos + Vector3.right * range * direction;
             direction *= -1;
             Flip();
@@ -46,27 +48,33 @@ public class FishMovement : MonoBehaviour
     private void Flip()
     {
         Vector3 scale = transform.localScale;
-        scale.x *= -1;
+        scale.x = Mathf.Abs(scale.x) * direction;
         transform.localScale = scale;
     }
 
     private void UpdateComboText()
     {
         if (isCombo && comboText != null)
-        {
             comboText.text = "Combo: " + combo;
-        }
     }
 
-    // Called by GameManager when combo rank increases
     public void BoostSpeed(float multiplier)
     {
         speed = baseSpeed * multiplier;
     }
 
-    // Called by GameManager when combo resets
     public void ResetSpeed()
     {
         speed = baseSpeed;
+    }
+
+    // ?? Simple click-to-catch handler
+    void OnMouseDown()
+    {
+        // Give points based on this fish’s score value
+        GameManager.Instance.AddScore(scoreValue);
+
+        // Destroy fish after scoring
+        Destroy(gameObject);
     }
 }

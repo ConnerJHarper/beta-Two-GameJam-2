@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
@@ -8,26 +9,29 @@ public class GameManager : MonoBehaviour
 
     [Header("UI")]
     public Text scoreText;
-    public Image rankImage; // Assign a UI Image for combo rank
-    public Sprite[] rankSprites; // 5 sprites for combo ranks (0–4)
+    public Image rankImage;
+    public Sprite[] rankSprites;
+    [Space]
+    [Tooltip("UI Text that shows 'Rank Up!' message")]
+    public Text rankUpText;         // <-- New field
+    public float rankUpDisplayTime = 2f; // How long the text stays visible
 
     [Header("Score & Combo")]
     public int score = 0;
     private int comboCount = 0;
-    public float comboDuration = 5f; // how long before combo resets
+    public float comboDuration = 5f;
     private float comboTimer;
     public int comboRank = 0;
     public int maxComboRank = 5;
 
     [Header("Fish Settings")]
-    [Tooltip("Add up to 5 fish prefabs here (different fish types).")]
     public GameObject[] fishPrefabs;
     public Transform[] spawnPoints;
 
-    public float fishSpeedBoostPerRank = 0.1f; // +10% per rank
-    public int startingFish = 4;               // start with 4 fish
-    public int extraFishPerRank = 2;           // always +2 on rank up
-    public float spawnInterval = 10f;          // optional timed spawn
+    public float fishSpeedBoostPerRank = 0.1f;
+    public int startingFish = 4;
+    public int extraFishPerRank = 2;
+    public float spawnInterval = 10f;
 
     private List<GameObject> activeFish = new List<GameObject>();
     private float spawnTimer;
@@ -46,11 +50,13 @@ public class GameManager : MonoBehaviour
         UpdateScoreUI();
         SpawnStartingFish();
         UpdateRankImage();
+
+        if (rankUpText != null)
+            rankUpText.enabled = false;
     }
 
     void Update()
     {
-        // Combo countdown
         if (comboCount > 0)
         {
             comboTimer -= Time.deltaTime;
@@ -60,7 +66,6 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        // Optional timed fish respawning
         spawnTimer += Time.deltaTime;
         if (spawnTimer >= spawnInterval)
         {
@@ -69,10 +74,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // 🧮 Add score + combo logic
+    // 🧮 Add score (called from FishMovement)
     public void AddScore(int amount)
     {
-        amount = 10;
         score += amount;
         comboCount++;
         comboTimer = comboDuration;
@@ -86,7 +90,6 @@ public class GameManager : MonoBehaviour
             scoreText.text = "Score: " + score;
     }
 
-    // 🎯 Rank progression logic
     private void CheckComboRankUp()
     {
         int newRank = Mathf.Clamp(comboCount / 3, 0, maxComboRank);
@@ -101,7 +104,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Rank Up! Now Rank " + comboRank);
 
-        // 1️⃣ Boost existing fish speed
+        // 1️⃣ Boost existing fish speeds
         foreach (GameObject fish in activeFish)
         {
             if (fish != null)
@@ -112,14 +115,35 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        // 2️⃣ Always spawn 2 new fish each rank
+        // 2️⃣ Spawn more fish
         for (int i = 0; i < extraFishPerRank; i++)
         {
             TrySpawnFish();
         }
 
-        // 3️⃣ Update rank UI
+        // 3️⃣ Update rank image
         UpdateRankImage();
+
+        // 4️⃣ Show the "Rank Up!" message
+        if (rankUpText != null)
+            StartCoroutine(ShowRankUpText());
+    }
+
+    private IEnumerator ShowRankUpText()
+    {
+        rankUpText.text = "Rank Up! Rank " + comboRank;
+        rankUpText.enabled = true;
+        rankUpText.canvasRenderer.SetAlpha(1f);
+
+        // Wait for the display duration
+        yield return new WaitForSeconds(rankUpDisplayTime);
+
+        // Fade out smoothly
+        rankUpText.CrossFadeAlpha(0f, 1f, false);
+        yield return new WaitForSeconds(1f);
+
+        rankUpText.enabled = false;
+        rankUpText.canvasRenderer.SetAlpha(1f); // Reset for next use
     }
 
     private void ResetCombo()
@@ -128,7 +152,6 @@ public class GameManager : MonoBehaviour
         comboRank = 0;
         comboTimer = 0f;
 
-        // Reset all fish speeds
         foreach (GameObject fish in activeFish)
         {
             if (fish != null)
@@ -151,7 +174,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // 🐟 Initial spawn
     private void SpawnStartingFish()
     {
         for (int i = 0; i < startingFish; i++)
@@ -160,10 +182,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // 🐠 Spawn a single fish
     private void TrySpawnFish()
     {
-        // Clean up destroyed fish
         activeFish.RemoveAll(f => f == null || f.Equals(null));
 
         if (spawnPoints.Length == 0 || fishPrefabs.Length == 0)
@@ -172,7 +192,6 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        // Pick random spawn point (avoid same twice)
         int newIndex;
         do
         {
@@ -182,9 +201,7 @@ public class GameManager : MonoBehaviour
         lastSpawnIndex = newIndex;
         Transform point = spawnPoints[newIndex];
 
-        // Small random offset
         Vector3 randomOffset = new Vector3(Random.Range(-4f, 4f), Random.Range(-2f, 2f), 0f);
-        // Random fish prefab
         GameObject chosenFish = fishPrefabs[Random.Range(0, fishPrefabs.Length)];
         GameObject fish = Instantiate(chosenFish, point.position + randomOffset, Quaternion.identity);
         activeFish.Add(fish);
