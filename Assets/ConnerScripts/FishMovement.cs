@@ -24,7 +24,7 @@ public class FishMovement : MonoBehaviour
     {
         startPos = transform.position;
         baseSpeed = speed;
-        direction = Random.value > 0.5f ? 1 : -1; 
+        direction = Random.value > 0.5f ? 1 : -1; // Random start direction
     }
 
     void Update()
@@ -68,5 +68,13 @@ public class FishMovement : MonoBehaviour
         speed = baseSpeed;
     }
 
-   
+    // ?? Simple click-to-catch handler
+    void OnMouseDown()
+    {
+        // Give points based on this fish’s score value
+        GameManager.Instance.AddScore(scoreValue);
+
+        // Destroy fish after scoring
+        Destroy(gameObject);
+    }
 }
