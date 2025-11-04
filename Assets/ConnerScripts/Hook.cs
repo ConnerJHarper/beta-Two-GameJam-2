@@ -10,6 +10,7 @@ public class Hook : MonoBehaviour
     private Vector3 startPos;
     private LineRenderer lineRenderer;
     private Transform boat;
+    private bool caughtFish = false;
 
     private void Start()
     {
@@ -61,6 +62,7 @@ public class Hook : MonoBehaviour
     {
         if (collision.CompareTag("Fish"))
         {
+            caughtFish = true;
             Destroy(collision.gameObject);
             if (GameManager.Instance != null)
                 GameManager.Instance.AddScore(1);
@@ -71,6 +73,11 @@ public class Hook : MonoBehaviour
 
     private void Despawn()
     {
+        if (!caughtFish)
+        {
+            FishCatchSound.ResetCombo();
+        }
+
         // Optional: fade out line instead of instantly disappearing
         if (lineRenderer != null)
             lineRenderer.enabled = false;

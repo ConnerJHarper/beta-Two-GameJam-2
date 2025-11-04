@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7289382907872748306}
   - component: {fileID: 79995604747712325}
   - component: {fileID: -2563885393368762259}
-  - component: {fileID: -7748485611388483320}
+  - component: {fileID: 4194987427290553471}
   m_Layer: 0
   m_Name: Hook
   m_TagString: Untagged
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volume: 0.6
   playDelay: 1
---- !u!114 &-7748485611388483320
+--- !u!114 &4194987427290553471
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -314,4 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b8bc4f4adc62f24db25d1f37804c474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volume: 0.4
+  catchClip: {fileID: 8300000, guid: 47fe342757d483b43a2a57b6c3212e58, type: 3}
+  volume: 1
+  pitchIncrease: 0.25
+  maxPitch: 2
