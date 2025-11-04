@@ -3,9 +3,9 @@ using UnityEngine;
 public class FishBubbleManager : MonoBehaviour
 {
     [Range(0f, 1f)] public float volume = 0.3f;
-    public float minInterval = 0.5f;
-    public float maxInterval = 1.5f;
-    public int maxFishSounds = 5;
+    public float minInterval = 0.5f; // Minimum time between sounds
+    public float maxInterval = 1.5f; // Maximum time between sounds
+    public int maxFishSounds = 5; // Max sounds per fish playing at once
 
     private float nextPlayTime;
 
