@@ -68,5 +68,13 @@ public class FishMovement : MonoBehaviour
         speed = baseSpeed;
     }
 
-   
+    
+    void OnMouseDown()
+    {
+        
+        GameManager.Instance.AddScore(scoreValue);
+
+        
+        Destroy(gameObject);
+    }
 }
