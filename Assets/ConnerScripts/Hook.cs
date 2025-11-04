@@ -3,9 +3,9 @@
 [RequireComponent(typeof(LineRenderer))]
 public class Hook : MonoBehaviour
 {
-    public float reelDelay = 3f;       // when to start reeling up
-    public float reelSpeed = 3f;       // speed of reeling
-    public float lifetime = 5f;        // total time before despawning
+    public float reelDelay = 2.5f;       
+    public float reelSpeed = 2f;       
+    public float lifetime = 2.5f;        
     private bool isReelingUp = false;
     private Vector3 startPos;
     private LineRenderer lineRenderer;
@@ -16,12 +16,11 @@ public class Hook : MonoBehaviour
         startPos = transform.position;
         lineRenderer = GetComponent<LineRenderer>();
 
-        // Find boat by tag
+   
         GameObject boatObj = GameObject.FindGameObjectWithTag("Boat");
         if (boatObj != null)
             boat = boatObj.transform;
 
-        // Line setup
         if (lineRenderer != null)
         {
             lineRenderer.positionCount = 2;
@@ -29,21 +28,20 @@ public class Hook : MonoBehaviour
             lineRenderer.endWidth = 0.02f;
         }
 
-        // Start timers
         Invoke(nameof(StartReeling), reelDelay);
-        Invoke(nameof(Despawn), lifetime); // 👈 Auto-despawn after set time
+        Invoke(nameof(Despawn), lifetime); 
     }
 
     private void Update()
     {
-        // Update line positions
+       
         if (lineRenderer != null && boat != null)
         {
             lineRenderer.SetPosition(0, boat.position);
             lineRenderer.SetPosition(1, transform.position);
         }
 
-        // Reel upward
+        
         if (isReelingUp)
         {
             transform.Translate(Vector2.up * reelSpeed * Time.deltaTime);
@@ -71,7 +69,7 @@ public class Hook : MonoBehaviour
 
     private void Despawn()
     {
-        // Optional: fade out line instead of instantly disappearing
+        
         if (lineRenderer != null)
             lineRenderer.enabled = false;
 
