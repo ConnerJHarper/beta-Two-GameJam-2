@@ -133,7 +133,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator ShowRankUpText()
     {
-        rankUpText.text = "Rank Up! Rank " + comboRank;
+        rankUpText.text = "Rank Up! Keep Going!";
         rankUpText.enabled = true;
         rankUpText.canvasRenderer.SetAlpha(1f);
 
@@ -203,9 +203,9 @@ public class GameManager : MonoBehaviour
         lastSpawnIndex = newIndex;
         Transform point = spawnPoints[newIndex];
 
-        Vector3 randomOffset = new Vector3(Random.Range(-1f, 1f), Random.Range(-2f, 2f), 0f);
+       
         GameObject chosenFish = fishPrefabs[Random.Range(0, fishPrefabs.Length)];
-        GameObject fish = Instantiate(chosenFish, point.position + randomOffset, Quaternion.identity);
+        GameObject fish = Instantiate(chosenFish, point.position, Quaternion.identity);
         activeFish.Add(fish);
     }
 }

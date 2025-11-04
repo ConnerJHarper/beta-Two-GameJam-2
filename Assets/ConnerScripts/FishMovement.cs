@@ -68,13 +68,13 @@ public class FishMovement : MonoBehaviour
         speed = baseSpeed;
     }
 
-    // ?? Simple click-to-catch handler
+    
     void OnMouseDown()
     {
-        // Give points based on this fish’s score value
+        
         GameManager.Instance.AddScore(scoreValue);
 
-        // Destroy fish after scoring
+        
         Destroy(gameObject);
     }
 }
