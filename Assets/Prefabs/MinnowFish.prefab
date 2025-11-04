@@ -103,8 +103,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   range: 6
-  isCombo: 1
-  combo: 3
+  scoreValue: 10
+  isCombo: 0
+  combo: 0
   comboText: {fileID: 0}
 --- !u!61 &4951233387667385811
 BoxCollider2D:
