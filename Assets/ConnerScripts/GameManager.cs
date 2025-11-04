@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour
     public Sprite[] rankSprites;
     [Space]
     [Tooltip("UI Text that shows 'Rank Up!' message")]
-    public Text rankUpText;         // <-- New field
-    public float rankUpDisplayTime = 2f; // How long the text stays visible
+    public Text rankUpText;         
+    public float rankUpDisplayTime = 2f; 
 
     [Header("Score & Combo")]
     public int score = 0;
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // 🧮 Add score (called from FishMovement)
+    
     public void AddScore(int amount)
     {
         score += amount;
@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Rank Up! Now Rank " + comboRank);
 
-        // 1️⃣ Boost existing fish speeds
+        
         foreach (GameObject fish in activeFish)
         {
             if (fish != null)
@@ -115,16 +115,16 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        // 2️⃣ Spawn more fish
+        
         for (int i = 0; i < extraFishPerRank; i++)
         {
             TrySpawnFish();
         }
 
-        // 3️⃣ Update rank image
+        
         UpdateRankImage();
 
-        // 4️⃣ Show the "Rank Up!" message
+       
         if (rankUpText != null)
             StartCoroutine(ShowRankUpText());
     }
@@ -135,15 +135,15 @@ public class GameManager : MonoBehaviour
         rankUpText.enabled = true;
         rankUpText.canvasRenderer.SetAlpha(1f);
 
-        // Wait for the display duration
+        
         yield return new WaitForSeconds(rankUpDisplayTime);
 
-        // Fade out smoothly
+        
         rankUpText.CrossFadeAlpha(0f, 1f, false);
         yield return new WaitForSeconds(1f);
 
         rankUpText.enabled = false;
-        rankUpText.canvasRenderer.SetAlpha(1f); // Reset for next use
+        rankUpText.canvasRenderer.SetAlpha(1f); 
     }
 
     private void ResetCombo()

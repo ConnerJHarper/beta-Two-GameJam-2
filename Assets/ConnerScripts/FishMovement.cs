@@ -24,7 +24,7 @@ public class FishMovement : MonoBehaviour
     {
         startPos = transform.position;
         baseSpeed = speed;
-        direction = Random.value > 0.5f ? 1 : -1; // Random start direction
+        direction = Random.value > 0.5f ? 1 : -1; 
     }
 
     void Update()
