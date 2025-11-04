@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour
     public Sprite[] rankSprites;
     [Space]
     [Tooltip("UI Text that shows 'Rank Up!' message")]
-    public Text rankUpText;         // <-- New field
-    public float rankUpDisplayTime = 2f; // How long the text stays visible
+    public Text rankUpText;        
+    public float rankUpDisplayTime = 2f; 
 
     [Header("Score & Combo")]
     public int score = 0;
@@ -74,9 +74,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // 🧮 Add score (called from FishMovement)
+   
     public void AddScore(int amount)
     {
+
+        amount = 10;
         score += amount;
         comboCount++;
         comboTimer = comboDuration;
@@ -102,7 +104,7 @@ public class GameManager : MonoBehaviour
 
     private void RankUp()
     {
-        Debug.Log("Rank Up! Now Rank " + comboRank);
+        Debug.Log("Rank Up! Now Rank ");
 
         // 1️⃣ Boost existing fish speeds
         foreach (GameObject fish in activeFish)
@@ -143,7 +145,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         rankUpText.enabled = false;
-        rankUpText.canvasRenderer.SetAlpha(1f); // Reset for next use
+        rankUpText.canvasRenderer.SetAlpha(1f); 
     }
 
     private void ResetCombo()
@@ -201,7 +203,7 @@ public class GameManager : MonoBehaviour
         lastSpawnIndex = newIndex;
         Transform point = spawnPoints[newIndex];
 
-        Vector3 randomOffset = new Vector3(Random.Range(-4f, 4f), Random.Range(-2f, 2f), 0f);
+        Vector3 randomOffset = new Vector3(Random.Range(-1f, 1f), Random.Range(-2f, 2f), 0f);
         GameObject chosenFish = fishPrefabs[Random.Range(0, fishPrefabs.Length)];
         GameObject fish = Instantiate(chosenFish, point.position + randomOffset, Quaternion.identity);
         activeFish.Add(fish);
