@@ -14,8 +14,6 @@ GameObject:
   - component: {fileID: 5856514450659245020}
   - component: {fileID: 7289382907872748306}
   - component: {fileID: 79995604747712325}
-  - component: {fileID: -2563885393368762259}
-  - component: {fileID: -7748485611388483320}
   m_Layer: 0
   m_Name: Hook
   m_TagString: Untagged
@@ -288,30 +286,3 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!114 &-2563885393368762259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2543735825806668778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b43c9551299f8284a80b7f3002bbb8be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volume: 0.6
-  playDelay: 1
---- !u!114 &-7748485611388483320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2543735825806668778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b8bc4f4adc62f24db25d1f37804c474, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volume: 0.4
