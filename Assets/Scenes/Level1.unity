@@ -4622,14 +4622,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1432836570}
     m_Modifications:
-    - target: {fileID: 4566400259854887952, guid: fd5a1095d19c4d64faa19b687c393a79, type: 3}
-      propertyPath: range
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 4566400259854887952, guid: fd5a1095d19c4d64faa19b687c393a79, type: 3}
-      propertyPath: speed
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8413456639975374622, guid: fd5a1095d19c4d64faa19b687c393a79, type: 3}
       propertyPath: m_Name
       value: MinnowFish

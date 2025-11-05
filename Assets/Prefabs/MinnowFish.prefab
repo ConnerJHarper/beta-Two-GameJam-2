@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5432515255294621546}
   - component: {fileID: 4566400259854887952}
   - component: {fileID: 4951233387667385811}
+  - component: {fileID: 4699876153472534347}
   m_Layer: 0
   m_Name: MinnowFish
   m_TagString: Fish
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.66564035, y: -2.95896, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: -672283421
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6365431279602286763, guid: 766fd8e32ade7ee448be965388ebd8df, type: 3}
+  m_Sprite: {fileID: 6898911371729413259, guid: 9c58ddc9ca2c91d4da364e92d7662603, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,8 +102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e76363bedd379f498c10f2a9e425fd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  range: 6
+  speed: 3
+  range: 13
   scoreValue: 10
   isCombo: 0
   combo: 0
@@ -141,15 +142,37 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.07869792, y: 0.0076521635}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.23, y: 3.29}
+    oldSize: {x: 1.55, y: 0.75}
     newSize: {x: 7.23, y: 3.29}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 7.23, y: 3.29}
+  m_Size: {x: 1.6660352, y: 0.7349684}
   m_EdgeRadius: 0
+--- !u!95 &4699876153472534347
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8413456639975374622}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ea5b49b62d09d104391730efa341a5b5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
