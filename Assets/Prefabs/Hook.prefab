@@ -315,6 +315,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   catchClip: {fileID: 8300000, guid: 47fe342757d483b43a2a57b6c3212e58, type: 3}
-  volume: 1
+  volume: 0.6
   pitchIncrease: 0.25
   maxPitch: 2
