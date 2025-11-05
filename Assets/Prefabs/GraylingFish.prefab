@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5503288740573873289}
   - component: {fileID: 4758146091899668831}
   - component: {fileID: 2136763466336007292}
+  - component: {fileID: 7375235478202434731}
   m_Layer: 0
   m_Name: GraylingFish
   m_TagString: Fish
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: -672283421
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7190531204413084139, guid: 546e754ac7c005546914788ce91ac1a5, type: 3}
+  m_Sprite: {fileID: 727566231171319606, guid: 934ef1e843fe39a428804a759f880d26, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,8 +104,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   range: 8
-  isCombo: 1
-  combo: 3
+  scoreValue: 10
+  isCombo: 0
+  combo: 0
   comboText: {fileID: 0}
 --- !u!61 &2136763466336007292
 BoxCollider2D:
@@ -144,7 +146,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.26, y: 4.16}
+    oldSize: {x: 10.742623, y: 4.98}
     newSize: {x: 9.26, y: 4.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -152,3 +154,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 9.26, y: 4.16}
   m_EdgeRadius: 0
+--- !u!95 &7375235478202434731
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6679291275368545050}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 02c0e834e5f9cf441a98e1c188d1f32a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

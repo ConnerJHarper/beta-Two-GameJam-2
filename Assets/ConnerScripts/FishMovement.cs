@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 
 public class FishMovement : MonoBehaviour
@@ -8,11 +8,11 @@ public class FishMovement : MonoBehaviour
     public float range = 3f;
 
     private Vector3 startPos;
-    private int direction = 1;
+    private int direction = 1; // 1 = right, -1 = left
     private float baseSpeed;
 
     [Header("Score Settings")]
-    [Tooltip("How many points this fish gives when caught")]
+    [Tooltip("Points this fish gives when caught")]
     public int scoreValue = 10;
 
     [Header("Combo UI (optional)")]
@@ -24,7 +24,14 @@ public class FishMovement : MonoBehaviour
     {
         startPos = transform.position;
         baseSpeed = speed;
-        direction = Random.value > 0.5f ? 1 : -1; 
+
+        // Random initial direction
+        direction = Random.value > 0.5f ? 1 : -1;
+
+        // Ensure sprite faces correct initial direction
+        Vector3 scale = transform.localScale;
+        scale.x = Mathf.Abs(scale.x) * direction;
+        transform.localScale = scale;
     }
 
     void Update()
@@ -35,12 +42,14 @@ public class FishMovement : MonoBehaviour
 
     private void MoveFish()
     {
+        // Move fish horizontally
         transform.Translate(Vector2.right * speed * direction * Time.deltaTime);
 
+        // Reverse direction if exceeded range
         if (Vector2.Distance(startPos, transform.position) > range)
         {
-            transform.position = startPos + Vector3.right * range * direction;
             direction *= -1;
+            startPos = transform.position; // reset start position for next range
             Flip();
         }
     }
@@ -68,13 +77,12 @@ public class FishMovement : MonoBehaviour
         speed = baseSpeed;
     }
 
-    // ?? Simple click-to-catch handler
+    // Click-to-catch handler
     void OnMouseDown()
     {
-        // Give points based on this fish’s score value
-        GameManager.Instance.AddScore(scoreValue);
+        if (GameManager.Instance != null)
+            GameManager.Instance.AddScore(scoreValue);
 
-        // Destroy fish after scoring
         Destroy(gameObject);
     }
 }

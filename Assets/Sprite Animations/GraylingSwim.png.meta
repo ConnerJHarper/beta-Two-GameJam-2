@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 934ef1e843fe39a428804a759f880d26
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 727566231171319606
+    second: GraylingSwim_0
+  - first:
+      213: 6647278662217146858
+    second: GraylingSwim_1
+  - first:
+      213: -4766700860447937962
+    second: GraylingSwim_2
+  - first:
+      213: -7445143102776897647
+    second: GraylingSwim_3
+  - first:
+      213: -5632870115432021444
+    second: GraylingSwim_4
+  - first:
+      213: 7278638668875269026
+    second: GraylingSwim_5
+  - first:
+      213: 4851636383685574067
+    second: GraylingSwim_6
+  - first:
+      213: 2365557888160461294
+    second: GraylingSwim_7
+  - first:
+      213: -9073485170256757711
+    second: GraylingSwim_8
+  - first:
+      213: -6816901013591396814
+    second: GraylingSwim_9
+  - first:
+      213: -8490146590295523279
+    second: GraylingSwim_10
+  - first:
+      213: 4832840752612985935
+    second: GraylingSwim_11
+  - first:
+      213: 7292163393986981922
+    second: GraylingSwim_12
+  - first:
+      213: -7557200035799914123
+    second: GraylingSwim_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GraylingSwim_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 271
+        width: 1074
+        height: 498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6374987e1a5d81a00800000000000000
+      internalID: 727566231171319606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GraylingSwim_1
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 271
+        width: 1010
+        height: 498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae1ac7879b0ef3c50800000000000000
+      internalID: 6647278662217146858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GraylingSwim_2
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 287
+        width: 802
+        height: 466
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65aa37e82d649ddb0800000000000000
+      internalID: -4766700860447937962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GraylingSwim_3
+      rect:
+        serializedVersion: 2
+        x: 3839
+        y: 287
+        width: 642
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19f88094bc98da890800000000000000
+      internalID: -7445143102776897647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GraylingSwim_4
+      rect:
+        serializedVersion: 2
+        x: 4991
+        y: 287
+        width: 642
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c32c2c7697604d1b0800000000000000
+      internalID: -5632870115432021444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GraylingSwim_5
+      rect:
+        serializedVersion: 2
+        x: 6015
+        y: 287
+        width: 802
+        height: 466
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a38bb23e4be20560800000000000000
+      internalID: 7278638668875269026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GraylingSwim_6
+      rect:
+        serializedVersion: 2
+        x: 6991
+        y: 271
+        width: 1010
+        height: 498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bd70fcf599745340800000000000000
+      internalID: 4851636383685574067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GraylingSwim_7
+      rect:
+        serializedVersion: 2
+        x: 8111
+        y: 271
+        width: 1074
+        height: 498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee17d63bd5624d020800000000000000
+      internalID: 2365557888160461294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GraylingSwim_8
+      rect:
+        serializedVersion: 2
+        x: 9295
+        y: 271
+        width: 994
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13c3210af41841280800000000000000
+      internalID: -9073485170256757711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GraylingSwim_9
+      rect:
+        serializedVersion: 2
+        x: 10559
+        y: 287
+        width: 786
+        height: 466
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23e62e745a08561a0800000000000000
+      internalID: -6816901013591396814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GraylingSwim_10
+      rect:
+        serializedVersion: 2
+        x: 11823
+        y: 255
+        width: 594
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 130017aa8a0fc2a80800000000000000
+      internalID: -8490146590295523279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GraylingSwim_11
+      rect:
+        serializedVersion: 2
+        x: 12975
+        y: 255
+        width: 594
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4c478b1f03b11340800000000000000
+      internalID: 4832840752612985935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GraylingSwim_12
+      rect:
+        serializedVersion: 2
+        x: 14015
+        y: 287
+        width: 786
+        height: 466
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22073b6a8f7f23560800000000000000
+      internalID: 7292163393986981922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GraylingSwim_13
+      rect:
+        serializedVersion: 2
+        x: 15055
+        y: 271
+        width: 994
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 579a3917b9e6f1790800000000000000
+      internalID: -7557200035799914123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      GraylingSwim_0: 727566231171319606
+      GraylingSwim_1: 6647278662217146858
+      GraylingSwim_10: -8490146590295523279
+      GraylingSwim_11: 4832840752612985935
+      GraylingSwim_12: 7292163393986981922
+      GraylingSwim_13: -7557200035799914123
+      GraylingSwim_2: -4766700860447937962
+      GraylingSwim_3: -7445143102776897647
+      GraylingSwim_4: -5632870115432021444
+      GraylingSwim_5: 7278638668875269026
+      GraylingSwim_6: 4851636383685574067
+      GraylingSwim_7: 2365557888160461294
+      GraylingSwim_8: -9073485170256757711
+      GraylingSwim_9: -6816901013591396814
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -178,9 +178,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee5f90092cc67904baaad7d31482eed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reelDelay: 3
-  reelSpeed: 3
-  lifetime: 4
+  reelDelay: 1
+  reelSpeed: 7
+  lifetime: 2
 --- !u!120 &79995604747712325
 LineRenderer:
   serializedVersion: 2
