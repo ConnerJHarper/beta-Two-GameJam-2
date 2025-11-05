@@ -82,7 +82,6 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        
 
     }
 
@@ -183,6 +182,8 @@ public class GameManager : MonoBehaviour
                 if (fm != null)
                     fm.ResetSpeed();
             }
+
+           
         }
 
         UpdateRankImage();
