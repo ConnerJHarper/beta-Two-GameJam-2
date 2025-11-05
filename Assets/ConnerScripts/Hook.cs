@@ -4,32 +4,31 @@
 public class Hook : MonoBehaviour
 {
     [Header("Hook Settings")]
-    public float reelDelay = 0.3f;       // Delay before reeling starts
-    public float reelSpeed = 5f;         // Speed at which hook reels toward boat
-    public float lifetime = 3f;          // Max time hook exists if no fish is caught
+    public float reelDelay = 0.5f;       
+    public float reelSpeed = 5f;         
+    public float lifetime = 3f;         
 
-    private bool isReeling = false;
-    private bool caughtFish = false;
-
+    private bool isReelingUp = false;
     private Vector3 startPos;
     private LineRenderer lineRenderer;
     private Transform boat;
+    private bool caughtFish = false;
 
     // Prevent multiple hooks
     public static bool IsHookActive = false;
 
     private void Start()
     {
-        // Prevent multiple hooks
+        // If another hook is active, destroy this one immediately
         if (IsHookActive)
         {
             Destroy(gameObject);
             return;
         }
+
         IsHookActive = true;
 
         startPos = transform.position;
-
         lineRenderer = GetComponent<LineRenderer>();
 
         // Find boat
@@ -48,33 +47,33 @@ public class Hook : MonoBehaviour
         // Start reeling after a short delay
         Invoke(nameof(StartReeling), reelDelay);
 
-        // Auto-despawn hook if it doesn't catch anything
+        // Despawn hook automatically if it doesn't catch a fish
         Invoke(nameof(Despawn), lifetime);
     }
 
     private void Update()
     {
-        // Draw the fishing line from boat to hook
+        // Draw line from boat to hook
         if (lineRenderer != null && boat != null)
         {
             lineRenderer.SetPosition(0, boat.position);
             lineRenderer.SetPosition(1, transform.position);
         }
 
-        // Smooth reeling motion toward boat
-        if (isReeling && boat != null)
+        // Reel hook up
+        if (isReelingUp)
         {
-            transform.position = Vector3.MoveTowards(transform.position, boat.position, reelSpeed * Time.deltaTime);
+            transform.Translate(Vector2.up * reelSpeed * Time.deltaTime);
 
-            // If hook reaches the boat, despawn
-            if (Vector3.Distance(transform.position, boat.position) < 0.01f)
+   
+            if (transform.position.y >= startPos.y)
                 Despawn();
         }
     }
 
     private void StartReeling()
     {
-        isReeling = true;
+        isReelingUp = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -83,15 +82,14 @@ public class Hook : MonoBehaviour
         {
             caughtFish = true;
 
-            // Add score based on fish prefab
+            // Give score from fish prefab
             FishMovement fish = collision.GetComponent<FishMovement>();
             if (fish != null && GameManager.Instance != null)
                 GameManager.Instance.AddScore(fish.scoreValue);
 
-            // Destroy the fish
             Destroy(collision.gameObject);
 
-            // Allow a new hook to be cast immediately
+            // Hook can be cast again immediately
             IsHookActive = false;
             Destroy(gameObject);
         }

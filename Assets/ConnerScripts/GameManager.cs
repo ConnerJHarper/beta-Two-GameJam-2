@@ -153,7 +153,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator ShowRankUpText()
     {
-        rankUpText.text = $"Rank Up! Rank {comboRank}";
+        rankUpText.text = $"Rank Up! Keep Going!";
         rankUpText.enabled = true;
         rankUpText.canvasRenderer.SetAlpha(1f);
 
