@@ -97,6 +97,11 @@ public class Hook : MonoBehaviour
 
     private void Despawn()
     {
+        if (!caughtFish)
+        {
+            FishCatchSound.ResetCombo();
+        }
+
         // Reset hook availability
         IsHookActive = false;
 
