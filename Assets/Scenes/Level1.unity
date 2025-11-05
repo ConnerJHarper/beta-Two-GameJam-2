@@ -476,8 +476,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -112.5, y: 124.100006}
-  m_SizeDelta: {x: 84.891, y: 82.33121}
+  m_AnchoredPosition: {x: -101.3, y: 151.8}
+  m_SizeDelta: {x: 62.0696, y: 59.5098}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &359125173
 GameObject:
@@ -819,7 +819,7 @@ Transform:
   m_GameObject: {fileID: 449503425}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.822, y: 3.058, z: 0}
+  m_LocalPosition: {x: -5.8, y: 3.01, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -892,7 +892,7 @@ Transform:
   m_GameObject: {fileID: 488173418}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.89, y: -0.55, z: 0}
+  m_LocalPosition: {x: 1.43, y: -3.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1444,7 +1444,7 @@ Transform:
   m_GameObject: {fileID: 642698168}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.35, y: -0.55, z: 0}
+  m_LocalPosition: {x: -6.35, y: -2.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1475,7 +1475,7 @@ Transform:
   m_GameObject: {fileID: 651974023}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.54, y: -0.55, z: 0}
+  m_LocalPosition: {x: -3.29, y: -3.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2187,7 +2187,7 @@ Transform:
   m_GameObject: {fileID: 949175039}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.69, y: -0.55, z: 0}
+  m_LocalPosition: {x: -2.6, y: -4.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2397,7 +2397,7 @@ Transform:
   m_GameObject: {fileID: 1149302691}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.89, y: -0.55, z: 0}
+  m_LocalPosition: {x: -1.95, y: -0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2562,7 +2562,7 @@ Transform:
   m_GameObject: {fileID: 1289850034}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.2, y: -0.55, z: 0}
+  m_LocalPosition: {x: -10.2, y: -1.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3010,7 +3010,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 715677328465500736, guid: c72868d549ccfef4f99accc0bab9a138, type: 3}
+  m_Sprite: {fileID: -4508112851834507617, guid: 0de10171bb1fcac4489f7c5f73b725d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4348,14 +4348,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989436960}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 3.05, y: 1.53, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.11, y: -0.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 839884102}
   m_Father: {fileID: 449503427}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2020505506
 GameObject:
   m_ObjectHideFlags: 0
@@ -4411,7 +4411,7 @@ MonoBehaviour:
   rankUpText: {fileID: 816761241}
   rankUpDisplayTime: 2
   score: 0
-  comboDuration: 15
+  comboDuration: 20
   comboRank: 0
   maxComboRank: 4
   fishRequiredRank: 02000000030000000400000005000000
@@ -4431,10 +4431,10 @@ MonoBehaviour:
   - {fileID: 1149302692}
   - {fileID: 488173419}
   - {fileID: 949175040}
-  fishSpeedBoostPerRank: 0.4
-  startingFish: 3
+  fishSpeedBoostPerRank: 1.5
+  startingFish: 5
   extraFishPerRank: 3
-  spawnInterval: 15
+  spawnInterval: 20
 --- !u!1 &2061138848
 GameObject:
   m_ObjectHideFlags: 0
@@ -4622,6 +4622,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1432836570}
     m_Modifications:
+    - target: {fileID: 4566400259854887952, guid: fd5a1095d19c4d64faa19b687c393a79, type: 3}
+      propertyPath: range
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566400259854887952, guid: fd5a1095d19c4d64faa19b687c393a79, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8413456639975374622, guid: fd5a1095d19c4d64faa19b687c393a79, type: 3}
       propertyPath: m_Name
       value: MinnowFish
@@ -4820,6 +4828,10 @@ PrefabInstance:
     - target: {fileID: 92398277900381203, guid: 8d56faded6e3df540804095548eff454, type: 3}
       propertyPath: combo
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 92398277900381203, guid: 8d56faded6e3df540804095548eff454, type: 3}
+      propertyPath: range
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 92398277900381203, guid: 8d56faded6e3df540804095548eff454, type: 3}
       propertyPath: isCombo

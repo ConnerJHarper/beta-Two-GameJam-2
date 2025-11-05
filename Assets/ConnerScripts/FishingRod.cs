@@ -8,7 +8,7 @@ public class FishingRod : MonoBehaviour
     void Update()
     {
         // Only cast a new hook if none is active
-        if (Input.GetKeyDown(KeyCode.Space) && !Hook.IsHookActive)
+        if (Input.GetButtonDown("Jump") && !Hook.IsHookActive)
         {
            
             Instantiate(hookPrefab, hookSpawnPoint.position, Quaternion.identity);

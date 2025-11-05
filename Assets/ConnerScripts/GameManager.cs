@@ -81,6 +81,9 @@ public class GameManager : MonoBehaviour
                 TrySpawnFish();
             }
         }
+
+        
+
     }
 
    
