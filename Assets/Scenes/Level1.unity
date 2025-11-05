@@ -4403,11 +4403,11 @@ MonoBehaviour:
   scoreText: {fileID: 429188519}
   rankImage: {fileID: 337746946}
   rankImages:
-  - {fileID: 5597166991185478614, guid: b7c8f25eed398274e80efae35306e306, type: 3}
   - {fileID: -1423610568815883361, guid: 428e3dbfad62a6142b2275c211da8f92, type: 3}
   - {fileID: 21300000, guid: b6fd4ca47a168734cab5374afe9dffac, type: 3}
   - {fileID: 3044075294750395999, guid: f417504a780516c4e945bb97a43ba231, type: 3}
   - {fileID: -4203994416600117226, guid: 8d3dc9676f96c2d458c2a6616b7ec805, type: 3}
+  - {fileID: 5597166991185478614, guid: b7c8f25eed398274e80efae35306e306, type: 3}
   rankUpText: {fileID: 816761241}
   rankUpDisplayTime: 2
   score: 0
