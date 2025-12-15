@@ -3,19 +3,15 @@ using UnityEngine.UI;
 
 public class FishMovement : MonoBehaviour
 {
-    [Header("Movement Settings")]
     public float speed = 2f;
     public float range = 3f;
 
     private Vector3 startPos;
-    private int direction = 1; // 1 = right, -1 = left
+    private int direction = 1; 
     private float baseSpeed;
 
-    [Header("Score Settings")]
-    [Tooltip("Points this fish gives when caught")]
     public int scoreValue = 10;
 
-    [Header("Combo UI (optional)")]
     public bool isCombo = false;
     public int combo = 0;
     public Text comboText;
